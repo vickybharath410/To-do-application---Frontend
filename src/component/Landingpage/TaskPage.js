@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Name from "../Name";
+
 
 function TaskPage() {
   const [data, setData] = useState([]);
@@ -35,8 +35,7 @@ function TaskPage() {
       .catch((e) => console.log(e));
   }, [flag]);
   return (
-    <div>
-      <Name />
+    <div id="taskpage">
       <div className="addtask">
         <button className="addbtn" onClick={() => navigate("/add")}>
           Add Task
